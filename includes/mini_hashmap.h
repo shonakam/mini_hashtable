@@ -6,16 +6,16 @@
 
 typedef struct	s_entry
 {
-	int	k;
-	int	v;
-	int f;  // 1: 使用中, 0: 未使用
+	void	*k;
+	void	*v;
+	int		f;  // 1: 使用中, 0: 未使用
 }				t_entry;
 
 typedef struct	s_hashtable
 {
-	t_entry	*buckets;
-	int		capacity;
-	int		size;
+	t_entry			*buckets;
+	unsigned int	capacity;
+	int				size;
 }				t_hashtable;
 
 # include <unistd.h>
